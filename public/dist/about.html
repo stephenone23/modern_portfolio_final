@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>About Me</title>
+  </head>
+
+  <body id="bg-img">
+    <ul>
+      <li>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+    </ul>
+    <% include menu %>
+    <main id="home">
+      <h1 class="lg-heading"></h1>
+      <h2 class="sm-heading"></h2>
+      <div class="icons"></div>
+    </main>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+          <i class="fas fa-blog"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-gitlab"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-reddit"></i>
+          <i class="fab fa-skype"></i>
+          <i class="fab fa-stack-overflow"></i>
+          <i class="fab fa-tumblr"></i>
+          <i class="fab fa-twitch"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-wordpress"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <% if (passportsession.id == adminid) { %>
+    <script src="js/indexadmin.js"></script>
+    <% } %>
+  </body>
+</html>

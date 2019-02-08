@@ -1,0 +1,28 @@
+main {
+  padding: 4rem;
+
+  &#skills {
+    overflow: hidden;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h1 {
+      margin-top: 10vh;
+    }
+  }
+
+  .skilldetail {
+    flex: 0;
+    ul > li {
+      color: #fff;
+    }
+  }
+  .show {
+    //display: inline;
+    height: auto;
+    flex: 1;
+    transition: all 1.5s ease-out;
+    overflow: hidden;
+  }
+}

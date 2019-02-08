@@ -1,0 +1,41 @@
+<header>
+  <div class="menu-btn">
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+  </div>
+  <nav class="menu">
+    <div class="menu-branding"><div class="portrait"></div></div>
+    <ul class="menu-nav">
+      <% if (passportsession) { %>
+      <li class="menu-item">
+        <a href="#" class="nav-link"
+          >Welcome <%= passportsession.displayName %></a
+        >
+      </li>
+      <% } %>
+      <li class="menu-item<% if (current == '/') { %> current<% } %>">
+        <a href="/" class="nav-link">
+          Home
+        </a>
+      </li>
+      <li class="menu-item<% if (current == 'about') { %> current<% } %>">
+        <a href="about.html" class="nav-link"> About Me </a>
+      </li>
+      <li class="menu-item<% if (current == 'work') { %> current<% } %>">
+        <a href="work.html" class="nav-link"> My Work </a>
+      </li>
+      <li class="menu-item<% if (current == 'skills') { %> current<% } %>">
+        <a href="skills.html" class="nav-link"> Skills </a>
+      </li>
+      <li class="menu-item<% if (current == 'contact') { %> current<% } %>">
+        <a href="contact.html" class="nav-link"> How To Reach Me </a>
+      </li>
+      <% if (!passportsession) { %>
+      <li class="menu-item">
+        <a href="/auth/google" class="nav-link"> Sign On with Google </a>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>
