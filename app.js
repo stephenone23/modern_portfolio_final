@@ -8,6 +8,7 @@ var session = require("express-session");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const GOOGLE_CONSUMER_KEY = require("./config/keys").clientid;
 const GOOGLE_CONSUMER_SECRET = require("./config/keys").secret;
+const BASE_URL = require("./config/keys").baseURL;
 
 let ejs = require("ejs");
 ejs.open = "{{";
@@ -59,7 +60,7 @@ passport.use(
     {
       clientID: GOOGLE_CONSUMER_KEY,
       clientSecret: GOOGLE_CONSUMER_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/callback"
+      callbackURL: BASE_URL + "auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done) {
       passport.session.profile = profile;
