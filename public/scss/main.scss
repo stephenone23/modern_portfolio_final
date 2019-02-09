@@ -85,7 +85,8 @@ main {
       margin-top: 20vh;
     }
   }
-  &#about {
+  // Contact Page
+  &#contact {
     body {
       margin: 0;
       padding: 0;
@@ -109,14 +110,15 @@ main {
       height: 50px;
       line-height: 50px;
       font-size: 20px;
-      text-align: #ccc;
+      text-align: center;
       text-decoration: none;
       color: $secondary-color;
       margin: 0 10px;
       transition: 0.5s;
     }
     ul li a span {
-      position: absolute transition transform 0.5s;
+      position: absolute;
+      transition: transform 0.5s;
     }
     ul li a span:nth-child(1),
     ul li a span:nth-child(3) {
@@ -127,73 +129,54 @@ main {
     ul li a span:nth-child(1) {
       top: 0;
       left: 0;
+      transform-origin: right;
+    }
+    ul li a:hover span:nth-child(1) {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s;
+    }
+    ul li a span:nth-child(3) {
+      bottom: 0;
+      left: 0;
+      transform-origin: left;
+    }
+    ul li a:hover span:nth-child(3) {
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+    }
+
+    ul li a span:nth-child(2),
+    ul li a span:nth-child(4) {
+      width: 1px;
+      height: 100%;
+      background: #262626;
+    }
+    ul li a span:nth-child(2) {
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin: bottom;
+    }
+    ul li a:hover span:nth-child(2) {
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: transform 0.5s;
+    }
+
+    ul li a span:nth-child(4) {
+      top: 0;
+      right: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+    ul li a:hover span:nth-child(4) {
+      transform: scaleY(1);
+      transform-origin: bottom;
+      transition: transform 0.5s;
     }
   }
 }
 
-// Contact Page
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-
-  .card {
-    width: 200px;
-    height: 200px;
-    transition: transform 1.5s ease-out;
-    transform-style: preserve-3d;
-    cursor: pointer;
-
-    &.is-flipped {
-      transform: rotateY(180deg);
-      transition: all 1.5s ease-out;
-    }
-  }
-
-  .cardface {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: $secondary-color;
-    display: table-cell;
-    vertical-align: middle;
-    backface-visibility: hidden;
-    overflow-wrap: break-word;
-  }
-
-  .cardfront {
-    text-align: center;
-    font-weight: bold;
-    line-height: 200px;
-    font-size: 32px;
-    background: $primary-color;
-  }
-
-  .cardback {
-    text-align: center;
-    font-weight: bold;
-    //padding: 20% 0 0 0;
-    font-size: 32px;
-    background: $primary-color;
-    transform: rotateY(180deg);
-  }
-
-  div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    //padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    @include easeOut;
-
-    // &:hover {
-    //   padding: 0.5rem 1.5rem;
-    //   background: $secondary-color;
-    //   color: set-text-color($secondary-color);
-    //   span {
-    //     color: set-text-color($secondary-color);
-    //   }
-    // }
-  }
-}
+@import "mobile";
