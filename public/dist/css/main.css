@@ -255,12 +255,75 @@ main {
   padding: 4rem;
   height: 100%; }
   main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: indianred;
-        transition: all 0.5s ease-out; }
+    margin: 0; }
+    main .icons ul {
+      position: relative;
+      top: 50%;
+      margin: 0;
+      padding: 0;
+      display: flex; }
+    main .icons ul li {
+      list-style: none; }
+    main .icons ul li a {
+      display: block;
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      line-height: 2rem;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: indianred;
+      margin: 0 1rem;
+      padding: 0.35rem;
+      transition: 0.5s; }
+    main .icons ul li a span {
+      position: absolute;
+      transition: transform 0.5s; }
+    main .icons ul li a span:nth-child(1),
+    main .icons ul li a span:nth-child(3) {
+      width: 100%;
+      height: 1px;
+      background: indianred; }
+    main .icons ul li a span:nth-child(1) {
+      top: 0;
+      left: 0;
+      transform-origin: right; }
+    main .icons ul li a:hover span:nth-child(1) {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s; }
+    main .icons ul li a span:nth-child(3) {
+      bottom: 0;
+      left: 0;
+      transform-origin: left; }
+    main .icons ul li a:hover span:nth-child(3) {
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s; }
+    main .icons ul li a span:nth-child(2),
+    main .icons ul li a span:nth-child(4) {
+      width: 1px;
+      height: 100%;
+      background: indianred; }
+    main .icons ul li a span:nth-child(2) {
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin: bottom; }
+    main .icons ul li a:hover span:nth-child(2) {
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: transform 0.5s; }
+    main .icons ul li a span:nth-child(4) {
+      top: 0;
+      right: 0;
+      transform: scaleY(0);
+      transform-origin: top; }
+    main .icons ul li a:hover span:nth-child(4) {
+      transform: scaleY(1);
+      transform-origin: bottom;
+      transition: transform 0.5s; }
   main .edit {
     font-size: 1rem;
     width: 18px;

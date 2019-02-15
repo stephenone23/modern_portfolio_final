@@ -14,9 +14,9 @@ function updateValues(data) {
   secondaryheading.innerText = name.substring(
     name.lastIndexOf(" "),
     name.length
-  ); // <span class="text-secondary">Couch</span>
-  heading.innerHTML += name.substring(0, name.lastIndexOf(" ")); // <h1 class="lg-heading">Eric</h1>
-  heading.appendChild(secondaryheading); // <h1 class="lg-heading">Eric<span class="text-secondary">Couch</span></h1>
+  ); // <span class="text-secondary">Williams</span>
+  heading.innerHTML += name.substring(0, name.lastIndexOf(" ")); // <h1 class="lg-heading">Stephen</h1>
+  heading.appendChild(secondaryheading); // <h1 class="lg-heading">Stephen<span class="text-secondary">Couch</span></h1>
 
   var heading = (document.querySelector(".sm-heading").innerHTML += tagline); // <h2 class="sm-heading">Full-Stack Developer, Software Development Instructor</h2>
 
@@ -25,6 +25,8 @@ function updateValues(data) {
   links.sort(function(a, b) {
     return a.order - b.order;
   });
+
+  var iconlist = document.createElement("ul");
 
   links.forEach(function(e, i) {
     const { name, link, icon, order } = e; // destructuring
@@ -36,10 +38,18 @@ function updateValues(data) {
       item.classList.add(e);
     }); // <i class="fab fa-github fa-3x"></i>
 
-    anchor.appendChild(item); // <a href="https://github.com/eric-couch"><i class="fab fa-github fa-3x"></i></a>
-    document.querySelector(".icons").appendChild(anchor);
+    var iconlistitem = document.createElement("li");
+
+    for (var i = 0; i < 4; i++) {
+      var emptyspan = document.createElement("span");
+      anchor.appendChild(emptyspan);
+    }
+    anchor.appendChild(item);
+    iconlistitem.appendChild(anchor);
+    iconlist.appendChild(iconlistitem);
     // <div class="icons"><a href="https://github.com/eric-couch"><i class="fab fa-github fa-3x"></i></a></div>
   });
+  document.querySelector(".icons").appendChild(iconlist);
 }
 
 document.addEventListener("DOMContentLoaded", function() {

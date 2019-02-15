@@ -18,15 +18,15 @@ function postData(url, data) {
 document.addEventListener("DOMContentLoaded", function() {
   var heading = document.querySelector(".lg-heading");
   var tagline = document.querySelector(".sm-heading");
-  var icons = document.querySelector(".icons");
+  // var icons = document.querySelector(".icons");
 
   heading.contentEditable = "true";
   tagline.contentEditable = "true";
   //icons.contentEditable = "true";
-  icons.addEventListener("click", function() {
-    //console.log("go to icons screen");
-    modal.style.display = "block";
-  });
+  // icons.addEventListener("click", function() {
+  //console.log("go to icons screen");
+  modal.style.display = "block";
+  //});
 
   heading.addEventListener("blur", function() {
     data = new Object();
