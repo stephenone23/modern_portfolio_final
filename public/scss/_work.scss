@@ -1,18 +1,13 @@
-* {
-  box-sizing: border-box;
-}
-header {
+header#work {
   text-align: center;
   background: url("/img/projects/dallas_skyline_at_night.jpg") no-repeat top
     center;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
-}
-header {
+  padding-top: 15vh;
   line-height: 1.5;
 }
-header .profile-image {
+header#work .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
