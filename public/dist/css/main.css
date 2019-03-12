@@ -98,26 +98,6 @@
 .menu-item:nth-child(6) {
   transition-delay: 0.6s; }
 
-main {
-  padding: 4rem; }
-  main#skills {
-    overflow: hidden;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
-    main#skills h1 {
-      margin-top: 10vh; }
-  main .skilldetail {
-    flex: 0; }
-    main .skilldetail ul > li {
-      color: #fff; }
-  main .show {
-    height: auto;
-    flex: 1;
-    transition: all 1.5s ease-out;
-    overflow: hidden; }
-
 /* The Modal (background) */
 .modal {
   display: none;
@@ -199,22 +179,6 @@ main {
   background-color: indianred;
   color: white; }
 
-header#work {
-  text-align: center;
-  background: url("/img/projects/dallas_skyline_at_night.jpg") no-repeat top center;
-  background-size: cover;
-  overflow: hidden;
-  padding-top: 15vh;
-  line-height: 1.5; }
-
-header#work .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
-  transition: all 0.5s; }
-
 * {
   box-sizing: border-box; }
 
@@ -269,7 +233,55 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  height: 100%;
+  /* Skills Page
+  &#skills {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana;
+      background: #262626;
+    }
+    .container {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .box {
+      width: auto;
+      text-align: center;
+      line-height: 200px;
+      flex-grow: 1;
+      transition: 0.5s;
+      font-size: 1.2em;
+      color: #fff;
+      background: #f00;
+    }
+    .box:hover {
+      flex-grow: 4;
+      max-width: 100%;
+      font-size: 2em;
+    }
+    .container .box:nth-child(1) {
+      background: #f1c40f;
+    }
+    .container .box:nth-child(2) {
+      background: #9b59b6;
+    }
+    .container .box:nth-child(3) {
+      background: #95a5a6;
+    }
+    .container .box:nth-child(4) {
+      background: #16a085;
+    }
+    .container .box:nth-child(5) {
+      background: #3498db;
+    }
+  }*/ }
   main .icons {
     margin: 0; }
     main .icons ul {
@@ -463,6 +475,83 @@ main {
       float: none; }
     main#about .container .box .thumb {
       display: none; } }
+  main#skills body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; }
+  main#skills .container {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+    background: black; }
+  main#skills .container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: black;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px; }
+  main#skills .container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: indianred;
+    transition: 0.5s;
+    z-index: 1; }
+  main#skills .container .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+  main#skills .container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5;
+    color: #fff; }
+  main#skills .container .box:hover .icon .icon .fa {
+    font-size: 50px; }
+  main#skills .container .box .content {
+    position: absolute;
+    top: 100%;
+    height: calc(100% -100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0; }
+  main#skills .container .box:hover .content {
+    top: 100px;
+    opacity: 1; }
+  main#skills .container .box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: indianred; }
+  main#skills .container .box .content p {
+    margin: 0;
+    padding: 0;
+    color: indianred; }
+  main#skills .container .box:nth-child(1) .icon {
+    background: indianred; }
+  main#skills .container .box:nth-child(1) {
+    background: #1a0000; }
+  main#skills .container .box:nth-child(2) .icon {
+    background: indianred; }
+  main#skills .container .box:nth-child(2) {
+    background: #1a0000; }
+  main#skills .container .box:nth-child(3) .icon {
+    background: indianred; }
+  main#skills .container .box:nth-child(3) {
+    background: #1a0000; }
   main#contact body {
     margin: 0;
     padding: 0; }
@@ -535,42 +624,6 @@ main {
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s; }
-  main#skills body {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana;
-    background: #262626; }
-  main#skills .container {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
-  main#skills .box {
-    width: auto;
-    text-align: center;
-    line-height: 200px;
-    flex-grow: 1;
-    transition: 0.5s;
-    font-size: 1.2em;
-    color: #fff;
-    background: #f00; }
-  main#skills .box:hover {
-    flex-grow: 4;
-    max-width: 100%;
-    font-size: 2em; }
-  main#skills .container .box:nth-child(1) {
-    background: #f1c40f; }
-  main#skills .container .box:nth-child(2) {
-    background: #9b59b6; }
-  main#skills .container .box:nth-child(3) {
-    background: #95a5a6; }
-  main#skills .container .box:nth-child(4) {
-    background: #16a085; }
-  main#skills .container .box:nth-child(5) {
-    background: #3498db; }
 
 @media screen and (min-width: 1171px) {
   .projects {
