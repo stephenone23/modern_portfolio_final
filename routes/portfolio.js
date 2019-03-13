@@ -27,7 +27,7 @@ router.all("/", function(req, res, next) {
 router.all("/saveName", function(req, res, next) {
   if (passport.session.profile && passport.session.profile.id == ADMIN_ID) {
     MongoClient.connect(mongouri, function(err, db) {
-      var dbo = db.db("moder_portfolio");
+      var dbo = db.db("test");
       var newvalues = { $set: { name: req.body.name } };
       dbo
         .collection("prospect")
@@ -47,7 +47,7 @@ router.all("/saveName", function(req, res, next) {
 router.all("/saveTagline", function(req, res, next) {
   if (passport.session.profile && passport.session.profile.id == ADMIN_ID) {
     MongoClient.connect(mongouri, function(err, db) {
-      var dbo = db.db("moder_portfolio");
+      var dbo = db.db("test");
       var newvalues = { $set: { tagline: req.body.tagline } };
       dbo
         .collection("prospect")
