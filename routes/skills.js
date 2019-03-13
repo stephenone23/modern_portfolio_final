@@ -5,7 +5,7 @@ const mongouri = require("../config/keys").MongoURI;
 
 router.all("/", function(req, res, next) {
   MongoClient.connect(mongouri, function(err, db) {
-    var dbo = db.db("modern_portfolio");
+    var dbo = db.db("test");
     dbo
       .collection("skills")
       .find()
