@@ -34,11 +34,10 @@ router.get("/contact.html", function(req, res, next) {
   });
 });
 
-router.get("/work.html", function(req, res, next) {
+/*router.get("/work.html", function(req, res, next) {
   res.render("work.html", {
     passportsession: passport.session.profile ? passport.session.profile : "",
     current: "work"
-  });
-});
+  });*/
 
 module.exports = router;
